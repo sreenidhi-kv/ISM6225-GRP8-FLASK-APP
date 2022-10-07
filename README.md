@@ -1,0 +1,2 @@
+# -ISM6225-GRP8-FLASK-APP
+Project of FLASK App 
