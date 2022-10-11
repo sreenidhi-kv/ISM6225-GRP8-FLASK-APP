@@ -3,8 +3,63 @@
 Product
 {% endblock %}
 {% block additionalMeta %}
+<meta name="description" content="Products Page for Kale">
+<meta name="author" content="Sreenidhi">
 {% endblock %}
 {% block additionalScript %}
+<script type="module" src="{{ url_for('static', filename='dataLoad.js')}}" defer></script>
 {% endblock %}
 {% block mainBody %}
+<div class="div-body">
+    <section>
+        <article>
+            <div>
+                <div class="grid-header">
+                    <h2>Smoothies</h2>
+                </div>
+                <div class="grid-container-product" id="smoothies">
+                    {% for prod in smoothies %}
+                    <div class="grid-item-product" id="{{prod['id']}}">
+                        <img src="{{ url_for('static', filename=prod['imageSrc'])}}" alt="{{prod['name']}}">
+                        <h3>{{prod['name']}}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <div class="grid-header">
+                    <h2>Salad</h2>
+                </div>
+                <div class="grid-container-product" id="salad">
+                    {% for prod in salad %}
+                    <div class="grid-item-product" id="{{prod['id']}}">
+                        <img src="{{ url_for('static', filename=prod['imageSrc'])}}" alt="{{prod['name']}}">
+                        <h3>{{prod['name']}}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <div class="grid-header">
+                    <h2>Bowl</h2>
+                </div>
+                <div class="grid-container-product" id="bowl">
+                    {% for prod in bowl %}
+                    <div class="grid-item-product" id="{{prod['id']}}">
+                        <img src="{{ url_for('static', filename=prod['imageSrc'])}}" alt="{{prod['name']}}">
+                        <h3>{{prod['name']}}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- The Modal -->
+    <div class="modal" id="productModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
