@@ -207,6 +207,7 @@ nav ul {
 
 .center {
     place-content: center;
+    text-align: center;
 }
 .right {
     float: right;
