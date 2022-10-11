@@ -3,8 +3,118 @@
 Home
 {% endblock %}
 {% block additionalMeta %}
+<meta name="description" content="Homepage for Kale">
+<meta name="author" content="Widya">
 {% endblock %}
 {% block additionalScript %}
 {% endblock %}
 {% block mainBody %}
+<article>
+    <section id="section-1" class="page-section-1">
+        <div>
+            <div class="image-block">
+                <img src="{{ url_for('static', filename='kale-scroll-2.png')}}">
+            </div>
+            <div id="opening-dancing-letters" class="page-section-1 opening-section__wapper">
+                <h1><span>k</span><span>a</span><span>l</span><span>e</span></h1>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script> //Dancing letters on hover with JQuery
+                    $('h1').on("mouseenter", function () {
+                        var t = 0; $(this).find("span").each(function () {
+                            var e = this; console.log(e); window.setTimeout(function () {
+                                $(e).addClass("is-active")
+                            }, 50 * t), window.setTimeout(function () {
+                                $(e).removeClass("is-active")
+                            }, 50 * (t + 1)), t++
+                        })
+                    });
+                </script>
+                <script> //Change on Scroll with plain Javascript
+                    const mBody = document.getElementsByTagName('body')[0]
+                    function scrollHeightCheck() {
+                        window.scrollY >= 50 ? mBody.classList.add('scrolled')
+                            : mBody.classList.remove('scrolled')
+                    }
+                    document.onscroll = function () { scrollHeightCheck() }
+                    scrollHeightCheck()
+                </script>
+            </div>
+    </section>
+    <div class="div-body">
+        <div class="body_70 center">
+            <h1>no more excuses
+                <em>and</em>
+                no more boring salad
+            </h1>
+        </div>
+
+        <div class="body_70 right">
+            <div>
+                <img src="{{ url_for('static', filename='mixed.jpg')}}" width="700">
+            </div>
+            <div>
+                <div>
+                    <p> Kale&#769 is dedicated to making healthy eating easy and convenient for everyone.
+                        Our menu
+                        is
+                        packed with nutrient-rich options that are perfect for any occasion, and our
+                        delivery
+                        service ensures
+                        that you can enjoy your favorite dishes no matter where you are. So next time you're
+                        feeling
+                        hungry,
+                        skip the fast food and give Kale&#769 a try. You won't be disappointed!</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="white_bg">
+                <h3>ENJOY A HEALTHY MEAL</h3>
+                <h1>Anytime,<br> Anywhere.</h1>
+                <img src="{{ url_for('static', filename='oats.jpg')}}" width="700">
+                <p> Kale&#769 understands that when it comes to healthy eating, convenience is key.
+                    That's why we offer a variety of delicious and nutritious salads, bowls, and smoothies
+                    that can
+                    be
+                    delivered
+                    right to your door.
+                    Whether you're looking for a quick and easy lunch or a healthy snack to keep you
+                    energized
+                    throughout
+                    the
+                    day, Kale&#769 has you covered.</p>
+
+            </div>
+            <br><br>
+            <div>
+                <h3>From breakfasts to packed lunches and dinner</h3>
+                <h1>Best Seller</h1>
+            </div>
+            <div class="grid-container center"> <a href="html/products.html">
+                    <img class="grid-item" src="{{ url_for('static', filename='sec2-img01.png')}}" style="width:150px;height:150px;">
+                    <img class="grid-item" src="{{ url_for('static', filename='sec2-img02.png')}}" style="width:150px;height:150px;">
+                    <img class="grid-item" src="{{ url_for('static', filename='sec2-img03.png')}}"style="width:150px;height:150px;">
+                </a>
+            </div>
+
+            <div>
+                <a href="html/products.html">
+                    <h3>Check out our customer's favorite</h3>
+                </a>
+            </div>
+
+            <div class="white_bg">
+                <h1>Meet our team</h1>
+                <div class="grid-container center">
+                    <a href="html/about.html">
+                        <img class="grid-item" src="{{ url_for('static', filename='Widya.png')}}" width="400">
+                        <img class="grid-item" src="{{ url_for('static', filename='Sree.png')}}" width="400">
+                        <img class="grid-item" src="{{ url_for('static', filename='Tyler.png')}}" width="400">
+                        <img class="grid-item" src="{{ url_for('static', filename='Burak.png')}}" width="400">
+                    </a>
+                </div>
+                </h1>
+            </div>
+
+        </div>
+</article>
 {% endblock %}

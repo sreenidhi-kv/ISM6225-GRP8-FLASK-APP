@@ -1,0 +1,272 @@
+[
+    {
+        "id": "smo001",
+        "name": "Orange Blast",
+        "type": "smoothies",
+        "imageSrc": "smoothie01.png",
+        "price": "12.99",
+        "nutriValue": [
+            600,
+            32,
+            40,
+            36,
+            50,
+            48
+        ]
+    },
+    {
+        "id": "smo002",
+        "name": "Strawberry Sunrise",
+        "type": "smoothies",
+        "imageSrc": "smoothie02.png",
+        "price": "14.99",
+        "nutriValue": [
+            360,
+            36,
+            40,
+            36,
+            20,
+            52
+        ]
+    },
+    {
+        "id": "smo003",
+        "name": "Watermelon Delight",
+        "type": "smoothies",
+        "imageSrc": "smoothie03.png",
+        "price": "15.99",
+        "nutriValue": [
+            210,
+            32,
+            4,
+            14,
+            10,
+            13
+        ]
+    },
+    {
+        "id": "smo004",
+        "name": "Kale Escape",
+        "type": "smoothies",
+        "imageSrc": "smoothie04.png",
+        "price": "15.99",
+        "nutriValue": [
+            253,
+            41,
+            40,
+            70,
+            90,
+            48
+        ]
+    },
+    {
+        "id": "smo005",
+        "name": "Mango Tango",
+        "type": "smoothies",
+        "imageSrc": "smoothie05.png",
+        "price": "13.98",
+        "nutriValue": [
+            490,
+            32,
+            41,
+            36,
+            30,
+            48
+        ]
+    },
+    {
+        "id": "smo006",
+        "name": "Cherry Crush",
+        "type": "smoothies",
+        "imageSrc": "smoothie06.png",
+        "price": "11.98",
+        "nutriValue": [
+            510,
+            32,
+            40,
+            42,
+            10,
+            48
+        ]
+    },
+    {
+        "id": "sal001",
+        "name": "Garden Party Salad",
+        "type": "salad",
+        "imageSrc": "salad01.png",
+        "price": "15.99",
+        "nutriValue": [
+            900,
+            32,
+            40,
+            36,
+            140,
+            48
+        ]
+    },
+    {
+        "id": "sal002",
+        "name": "Summertime Blues Salad",
+        "type": "salad",
+        "imageSrc": "salad02.png",
+        "price": "14.99",
+        "nutriValue": [
+            710,
+            32,
+            40,
+            42,
+            90,
+            48
+        ]
+    },
+    {
+        "id": "sal003",
+        "name": "Rainbow Salad",
+        "type": "salad",
+        "imageSrc": "salad03.png",
+        "price": "13.99",
+        "nutriValue": [
+            1090,
+            32,
+            40,
+            36,
+            110,
+            48
+        ]
+    },
+    {
+        "id": "sal004",
+        "name": "Veggie Lover's Salad",
+        "type": "salad",
+        "imageSrc": "salad04.png",
+        "price": "16.99",
+        "nutriValue": [
+            800,
+            32,
+            40,
+            36,
+            130,
+            48
+        ]
+    },
+    {
+        "id": "sal005",
+        "name": "Island Breeze Salad",
+        "type": "salad",
+        "imageSrc": "salad05.png",
+        "price": "13.99",
+        "nutriValue": [
+            610,
+            32,
+            40,
+            42,
+            10,
+            48
+        ]
+    },
+    {
+        "id": "sal006",
+        "name": "Taste of Fall Salad",
+        "type": "salad",
+        "imageSrc": "salad06.png",
+        "price": "14.99",
+        "nutriValue": [
+            790,
+            32,
+            40,
+            36,
+            120,
+            48
+        ]
+    },
+    {
+        "id": "bow001",
+        "name": "The All-American Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl01.png",
+        "price": "12.99",
+        "nutriValue": [
+            1800,
+            232,
+            40,
+            36,
+            0,
+            148
+        ]
+    },
+    {
+        "id": "bow002",
+        "name": "The Turkish Fiesta Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl02.png",
+        "price": "10.99",
+        "nutriValue": [
+            1600,
+            122,
+            40,
+            36,
+            0,
+            248
+        ]
+    },
+    {
+        "id": "bow003",
+        "name": "The Indian Spice Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl03.png",
+        "price": "18.99",
+        "nutriValue": [
+            1730,
+            232,
+            40,
+            36,
+            0,
+            388
+        ]
+    },
+    {
+        "id": "bow004",
+        "name": "The Asian Treat Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl04.png",
+        "price": "16.99",
+        "nutriValue": [
+            1989,
+            232,
+            40,
+            36,
+            0,
+            148
+        ]
+    },
+    {
+        "id": "bow005",
+        "name": "The Greek Delight Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl05.png",
+        "price": "14.99",
+        "nutriValue": [
+            1840,
+            122,
+            40,
+            36,
+            0,
+            248
+        ]
+    },
+    {
+        "id": "bow006",
+        "name": "The Florida Sunshine Bowl",
+        "type": "bowl",
+        "imageSrc": "bowl06.png",
+        "price": "21.99",
+        "nutriValue": [
+            1430,
+            232,
+            40,
+            36,
+            0,
+            388
+        ]
+    }
+]
