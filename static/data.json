@@ -12,7 +12,8 @@
             36,
             50,
             48
-        ]
+        ],
+        "description": "This smoothie is the perfect drink to quench your thirst and refresh your senses. Made with natural orange juice, Orange Blast is light and refreshing, with a zesty citrus flavor that will tantalize your taste buds. The perfect choice for a summertime treat, it is also great for parties and gatherings. So go ahead and indulge in the delicious taste of Orange Blast!"
     },
     {
         "id": "smo002",
@@ -27,7 +28,8 @@
             36,
             20,
             52
-        ]
+        ],
+        "description": "Wake up to the delicious taste of strawberries and oranges in our Strawberry Sunrise smoothie. Made with only the freshest ingredients, this smoothie is perfect for breakfast or anytime you need a nutrient-rich pick-me-up. Packed with vitamins, minerals, and antioxidants, our Strawberry Sunrise is sure to give your day a boost!"
     },
     {
         "id": "smo003",
@@ -42,7 +44,8 @@
             14,
             10,
             13
-        ]
+        ],
+        "description": "Introducing Kalè, the delicious new way to enjoy watermelon! Our Watermelon Delight Smoothies are made with fresh watermelon, carrot, apple, kiwi, and lemon for a refreshing and healthy treat. They're perfect for satisfying your sweet tooth without all the sugar, and they're ideal for on-the-go or pre/post-workout. Plus, they're packed with vitamins and minerals to give you a boost of energy. So why wait? Try Kalè today and see what you've been missing!"
     },
     {
         "id": "smo004",
@@ -57,7 +60,8 @@
             70,
             90,
             48
-        ]
+        ],
+        "description": "Looking for a delicious, nutritious way to get your daily dose of kale? Look no further than Kalè Kale Escape Smoothies! Our convenient, ready-to-drink smoothies are packed with all the benefits of kale, plus other healthy ingredients like spinach, flaxseed, and bananas. They're perfect for a quick breakfast or snack on the go. And best of all, they taste great!"
     },
     {
         "id": "smo005",
@@ -72,7 +76,8 @@
             36,
             30,
             48
-        ]
+        ],
+        "description": "For a blast of flavor that will leave your taste buds tingling, try our Mango Tango Smoothies. Made with a tantalizing blend of mangoes, oranges, and bananas, these smoothies are sure to please. Our Mango Tango Smoothies are perfect for a quick snack or a refreshing treat after a workout. So come on in and try one today!"
     },
     {
         "id": "smo006",
@@ -87,7 +92,8 @@
             42,
             10,
             48
-        ]
+        ],
+        "description": "Who doesn't love a refreshing cherry smoothie on a hot summer day? Kalè's Cherry Crush Smoothies are the perfect way to cool down and enjoy the flavors of summer. Made with real cherries and non-fat yogurt, our Cherry Crush Smoothies are delicious and nutritious. And because they're made with real fruit, they're a great source of Vitamins A & C. So not only do they taste great, they're good for you too!"
     },
     {
         "id": "sal001",
@@ -102,7 +108,8 @@
             36,
             140,
             48
-        ]
+        ],
+        "description": "Kalè is the perfect green party salad for any occasion! This healthy and flavorful salad is made with crisp Romaine lettuce, fresh kale, and cherry tomatoes. It is topped with a creamy lemon dressing and crumbled feta cheese. This salad is sure to please vegans, vegetarians, and meat-eaters alike!"
     },
     {
         "id": "sal002",
@@ -117,7 +124,8 @@
             42,
             90,
             48
-        ]
+        ],
+        "description": "Looking for a way to beat the summer heat? Try our Kalè Summertime Blues Salad! This refreshing salad is perfect for a picnic or BBQ. It features crisp lettuce, juicy tomatoes, and crunchy beets. The dressing is a light balsamic vinaigrette that brings all the flavors together. So if you're looking for a salad that will please everyone at your next gathering, look no further than our Summertime Blues Salad!"
     },
     {
         "id": "sal003",
@@ -132,7 +140,8 @@
             36,
             110,
             48
-        ]
+        ],
+        "description": "Rainbow Salad is perfect for a summer picnic or barbeque. The sweet and tangy dressing complements the crunchy vegetables perfectly. And it's healthy too! So go ahead and indulge in this salad, guilt-free."
     },
     {
         "id": "sal004",
@@ -147,7 +156,8 @@
             36,
             130,
             48
-        ]
+        ],
+        "description": "Looking for a tasty and healthy salad that will satisfy your hunger and leave you feeling great? Look no further than Kalè Veggie Lovers Salad! This hearty salad is packed with an array of fresh fruits and vegetables, including spinach, avocado, tomatoes, and more. And it's all tossed in a light and flavorful dressing that is sure to please. Whether you're looking for a delicious and nutritious lunch or dinner option, or simply want to enjoy a satisfying and healthy snack, Our Veggie Lovers is a perfect choice!"
     },
     {
         "id": "sal005",
@@ -162,7 +172,8 @@
             42,
             10,
             48
-        ]
+        ],
+        "description": "Our Breeze Salad is the perfect way to enjoy the bold flavors of the tropics. This tantalizing blend of crisp greens, juicy fruits, and savory vegetables is perfect for a summertime picnic or an anytime refresher. The result is a light, flavorful salad that's as beautiful to look at as it is delicious to eat. So sit back, relax, and enjoy the taste of paradise."
     },
     {
         "id": "sal006",
@@ -177,7 +188,8 @@
             36,
             120,
             48
-        ]
+        ],
+        "description": "Looking for a delicious way to enjoy the taste of fall? Look no further than Kalè Taste of Fall Salad! This mix of spinach greens is perfect for adding a touch of seasonal flavor to your meals. With its earthy taste and nutrient-rich content, our Taste of Fall Salad is sure to become a favorite in your household. And what's more, it's healthy and low in calories, so you can indulge guilt-free! So go ahead and enjoy the taste of fall - with Kalè Taste of Fall Salad!"
     },
     {
         "id": "bow001",
@@ -192,7 +204,8 @@
             36,
             0,
             148
-        ]
+        ],
+        "description": "The All American bowl is a delicious, healthy meal that is perfect for any time of day. This dish is made with shrimp, avocado, and brown rice, and is served with a side of mixed vegetables. The shrimp are cooked to perfection, and the avocado adds a creamy richness to the dish. The brown rice gives the bowl a nutty flavor and satisfying texture. This meal is sure to please everyone in the family and is a great way to get your daily dose of protein and fiber."
     },
     {
         "id": "bow002",
@@ -207,7 +220,8 @@
             36,
             0,
             248
-        ]
+        ],
+        "description": "For a Turkish-inspired twist on a classic rice bowl, try our Turkish Fiesta Rice Bowl! Our mix of beet, wild rice, and tofu are both flavorful and nutritious, making it the perfect meal for any time of day. The vibrant colors and bold flavors are sure to please, while the high protein content will keep you satisfied for hours. So go ahead and indulge in a little Turkish flavor – your taste buds will thank you!"
     },
     {
         "id": "bow003",
@@ -222,7 +236,8 @@
             36,
             0,
             388
-        ]
+        ],
+        "description": "Our Indian Spice bowl is perfect for a quick lunch or dinner. This delicious bowl features beet, wild rice, and tofu, all cooked in a flavorful spice blend. The beets add a sweetness to the dish, while the wild rice provides a nutty flavor and slightly chewy texture. The tofu is a great source of protein, making this meal not only tasty but also nutritious. Whether you're looking for a Meatless Monday option or just want to try something new, our Indian Spice rice bowl will definitely hit the spot!"
     },
     {
         "id": "bow004",
@@ -237,7 +252,8 @@
             36,
             0,
             148
-        ]
+        ],
+        "description": "Kalè is the perfect bowl for those who love Asian cuisine. This delicious bowl comes with vegetable rolls, a sunny side, spinach, and your choice of protein. It is perfect for a quick and easy meal or a more filling experience. There is also a variety of sauces to choose from, so you can customize your bowl to your liking."
     },
     {
         "id": "bow005",
@@ -252,7 +268,8 @@
             36,
             0,
             248
-        ]
+        ],
+        "description": "Try our delicious and nutritious Greek Delight vegetable bowl. It is perfect for those who are looking for a healthy and flavorful option. Packed with a variety of vegetables that are typically found in a Greek salad, such as tomatoes, cucumbers, peppers, onions, and olives. It also includes feta cheese and a light dressing. This dish is perfect for a light lunch or dinner. It is also a great option for people who are trying to eat healthier."
     },
     {
         "id": "bow006",
@@ -267,6 +284,7 @@
             36,
             0,
             388
-        ]
+        ],
+        "description": "Looking for a delicious and healthy way to enjoy the taste of the Sunshine State? Try Kalè's very own Sunshine Rice Bowls! Our bowls are made with brown rice, and they're perfect for a quick and healthy meal. Each bowl is filled with nutritious ingredients like veggies, beans, and lean protein. And they're topped with our special Sunshine Sauce, made with real Florida orange juice."
     }
 ]

@@ -47,13 +47,15 @@ function updateProductModel(event, container) {
 
     var pd = productData.find(p => p.id == container.id);
     const modelDiv = `<div class="modal-header">
-                        <h3 class="modal-title">${pd.name}</h3>
+                        <h2 class="modal-title">${pd.name}</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body productsDetails">
-                        <h5 style="text-align: left;">Nutrition chart :-</h3>
+                        <h4 style="text-align: left;">${pd.description}</h4>
+                        <br>
+                        <h5 style="text-align: left;">Nutrition chart :-</h5>
                          <canvas id="productChart" style="width:100%;max-width:700px"></canvas>
-                        <h5 style="text-align: left;">Price : $ ${pd.price}</h3>
+                        <h3 style="text-align: left;">Price : $ ${pd.price}</h3>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

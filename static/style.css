@@ -43,6 +43,10 @@ h4 {
     font-size: 1rem;
 }
 
+h6 {
+    font-size: .75rem;
+}
+
 
 span.is-active {
     transform:translateY(-15px);
@@ -318,12 +322,17 @@ section::after {
     clear: both;
 }
 
+.footer_logo{
+    clear: both;
+    padding-top: 100px;
+}
+
 footer {
     line-height: 25px;
     float: left; 
     position: relative;
     background: rgba(28, 32, 36, 1);
-    bottom:-120px;
+    bottom:-20px;
     width: 100%;
     height: 50px;
     color: white;
@@ -358,4 +367,8 @@ footer {
 textarea {
   width: 50%;
   height: 90px;
+}
+
+.button{
+    border: 2px black;
 }

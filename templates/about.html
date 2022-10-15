@@ -3,8 +3,129 @@
 About
 {% endblock %}
 {% block additionalMeta %}
+<meta name="description" content="About Us Page for Kale">
+<meta name="author" content="Tyler Sobieray">
 {% endblock %}
 {% block additionalScript %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+<script src="{{ url_for('static', filename='aboutform.js')}}" ></script>
+
 {% endblock %}
 {% block mainBody %}
+<div class="div-body">
+    <section>
+        <h2> What is Kale&#769?</h2>
+        <p>Kale&#769 is a health products company bringing you all natural smoothies and salads. Founded in Fall 2022,
+            our mission is to bring affordable, healthy products to a wide customer base.
+            <br><br>EVERYONE deserves a shot at a healthy lifestyle; therefore, we pledge to donate $10 worth of
+            products for every $1,000 sold. With your help, we can make a difference that encompasses the World.
+            <br><br> We promise to provide nothing but the best, healthiest products. Our products are never processed
+            and 100% natural. If it doesn't come from the Earth, we are not going to put it in your body. <br>
+        </p>
+    </section>
+    <br>
+    <section>
+        <h2 style="text-align: Center;"> Meet our Team</h2>
+
+        <table style="width: 100%; padding-right: 2%; padding-left: 2%;">
+
+            <tr>
+                <td style="width: 20%;">
+                    <img class="about_img" src="{{ url_for('static', filename='Widya.png')}}" alt="Widya Photo" id="Widya" >
+                </td>
+                <td style="width: 20%;">
+                    <b>Widya Musgrove - President</b>
+                </td>
+                <td style="width: 45%;  text-align: left;" >
+                    <i>
+                        Widya Musgrove is the President of Kale&#769 Inc. Her passion for helping people live
+                                healthier life drives this company every day. She is a talented leader that brings a
+                                positive attitude to every situation. She oversaw the design of our website.
+                                She created a wire frame and Logo for the team. As part of assignment 2 she added Kale's
+                                Mascot on the opening section on the Homepage and wrote JavaScript code to make the
+                                tittle transition out on scroll and used JQuery to create moving-letter effects on mouse
+                                over.She used CSS pseudo elements to hide the navigation menu on load,incorporated
+                                custom font using CSS @font-face rule. Further she created the delivery/order form and
+                                also she wrote the product description.<br>
+                    </i>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td style="width: 20%;">
+                    <img class="about_img" src="{{ url_for('static', filename='Sree.png')}}" alt="Sree Image" id="Sree" >
+                </td>
+                <td style="width: 20%;">
+                    <b>Sreenidhi K V Naik - CEO</b>
+                </td>
+                <td style="width: 45%;text-align: left;">
+                    <i>
+                        Sreenidhi K V Naik is Kale&#769 Inc.'s fearless CEO. His hard work and attention to
+                        detail are going to propel this company to new heights. Sreenidhi created most of our
+                        stylesheet, and he led the way on our collaborative coding sessions. He created the
+                        sticky navigation bar and the products page. Lastly, Sreenidhi integrated all the page
+                        together to match the same theme. As part of assignment 2 he dynamically loaded the
+                        product details using JavaScript so that no code changes are required in html layer when
+                        the number of products increase in future. Also, he included product discription, price
+                        and nutrient chart for each of these products, click on product image to know more.
+                    </i>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td style="width: 20%;">
+                    <img class="about_img" src="{{ url_for('static', filename='Burak.png')}}" alt="Burak Image" id="Burak">
+                </td>
+                <td style="width: 20%;">
+                    <b>Guven Burak Dekkan - CTO</b>
+                </td>
+                <td style="width: 45%;text-align:left;">
+                    <i>
+                        Guven Burak Dekkan is the CTO of Kale&#769 Inc. His innovative ideas provide the company
+                        with the ability to be agile. His knowledge of the supplements business is invaluable.
+                        He created the landing page for our team and added the login page as an improvement to
+                        Assignment-1. The login page is not currently functional, but has all the input
+                        validation required to create new user.
+                    </i>        
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td style="width: 20%;">
+                    <img class="about_img" src="{{ url_for('static', filename='Tyler.png')}}" alt="Tyler Image" id="Tyler" >
+                </td>
+                <td style="width: 20%;">
+                    <b> Tyler Sobieray - CFO</b>
+                </td>
+                <td style="width: 45%;text-align:left;">
+                    <i>
+                        Tyler Sobieray is the CFO of Kale&#769 Inc.
+                        Tyler has a passion for healthy living, and wants to help share that passion with the
+                        world! He created the About Us page for our team, and wrote the descriptions for our
+                        company and team members. Lastly, Tyler was the role of Group Leader for this project.
+                        As part of assignment 2 he added the option in the about page to send message with all
+                        input validations.
+                    </i>
+                </td>
+
+            </tr>
+
+        </table>
+        <br>
+
+        <div id = "popup">
+        <form action="#" id="form" method="post" name="form" style="align-content: center;">
+        <input id="name"  name="name" placeholder="Name" type="text">
+        <input id="email" name="email" placeholder="Email" type="text">
+        <br>
+        <textarea id="msg" name="message" placeholder="Type your Message"></textarea>
+        <br><br>
+        <button id="Contact Us" onclick="empty_form()">Send Message</button>
+        </form>
+        </div>
+
+
+    </section>
+  
+</div>
 {% endblock %}
