@@ -3,6 +3,7 @@ from flask import Flask, request, render_template, session
 from datetime import datetime
 import re
 import json
+import bcrypt
 
 
 class User():
@@ -85,11 +86,12 @@ def signIn():
     if user == None:
         return render_template("login.html", user=None, msg="User does not exsist, please use sign up to create account")
     else:
-        if user['psw'] != psw:
-            return render_template("login.html", user=None, msg="Credentials do not match, please try again ")
-        else:
+        if bcrypt.checkpw(psw.encode('utf-8'), str.encode(user['psw'])):
             session['user'] = user
             return render_template("home.html", user=user)
+
+        else:
+            return render_template("login.html", user=None, msg="Credentials do not match, please try again ")
 
 
 @app.route("/signup_action", methods=['POST'])
@@ -97,10 +99,15 @@ def signUp():
     email = request.form['email']
     name = request.form['name']
     psw = request.form['psw']
-    user = User(name, email, psw)
+    psw_repeat = request.form['psw-repeat']
+    if (psw != psw_repeat):
+        return render_template("login.html", user=None, msg="Password do not match !!")
+
+    user = User(name, email, bcrypt.hashpw(
+        psw.encode('utf-8'), bcrypt.gensalt()).decode())
     if addUser(user=user):
         user_json = json.loads(json.dumps(user.__dict__))
         session['user'] = user_json
         return render_template("home.html", user=user_json)
     else:
-        return render_template("login.html", user=None, msg="User already Exist try adding new user")
+        return render_template("login.html", user=None, msg="User already Exist try adding new user !!")

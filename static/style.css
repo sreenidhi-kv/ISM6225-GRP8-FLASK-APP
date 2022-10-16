@@ -116,6 +116,7 @@ nav ul {
     position: relative;
     text-align: center;
     place-content: center;
+    top: 100px;
  }
  .opening-section__wapper{
     left: 0px;
