@@ -42,6 +42,7 @@ const doughnutOptions = {
     }
 };
 
+
 function updateProductModel(event, container) {
     console.log(container.id)
 
@@ -59,6 +60,7 @@ function updateProductModel(event, container) {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button onclick="addToCart(\'${pd.id}\')" type="button" class="btn btn-primary">Add to Cart</button>
                     </div>`;
 
     const modalContent = document.querySelector(".modal-content");

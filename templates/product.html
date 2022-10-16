@@ -54,6 +54,21 @@ Product
             </div>
         </article>
     </section>
+    <script>
+        function addToCart(productId) {
+            var size = fetch('/product/' + productId,
+                { method: 'POST' }
+            ).then((response) => response.json())
+                .then((data) => {
+                    const cartSize = document.getElementById('cartSize')
+                    console.log(data)
+                    cartSize.innerHTML = data
+                    var myModal = document.getElementById('productModel')
+                    var modal = bootstrap.Modal.getInstance(myModal)
+                    modal.hide()
+                })
+        }
+    </script>
     <!-- The Modal -->
     <div class="modal" id="productModel">
         <div class="modal-dialog">

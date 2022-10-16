@@ -50,7 +50,7 @@ def home():
     return render_template("home.html", user=session.get('user'))
 
 
-@app.route("/product/")
+@ app.route("/product/")
 def product():
     fileObject = open("static/data.json", "r")
     jsonContent = fileObject.read()
@@ -61,24 +61,47 @@ def product():
     return render_template("product.html", smoothies=smoothies, salad=salad, bowl=bowl, user=session.get('user'))
 
 
-@app.route("/about/")
+@ app.route('/product/<product_id>', methods=['POST'])
+def add_to_cart(product_id):
+    cartToAdd = [product_id]
+    cart = session.get('cart')
+    if cart != None:
+        cart.append(cartToAdd)
+    else:
+        cart = cartToAdd
+    session['cart'] = cart
+    return str(len(session['cart']))
+
+
+@ app.route('/getCartSize', methods=['POST'])
+def getCartSize():
+    cart = session.get('cart')
+    if cart != None:
+        return str(len(session['cart']))
+    else:
+        return '0'
+
+
+@ app.route("/about/")
 def about():
     return render_template("about.html", user=session.get('user'))
 
 
-@app.route("/login/")
+@ app.route("/login/")
 def login():
     return render_template("login.html", user=None)
 
 
-@app.route("/logout/")
+@ app.route("/logout/")
 def logout():
     if 'user' in session:
         session.pop('user', None)
+    if 'cart' in session:
+        session.pop('cart', None)
     return render_template("home.html", user=None, msg="User Successfully Logged out !!")
 
 
-@app.route("/signin_action", methods=['POST'])
+@ app.route("/signin_action", methods=['POST'])
 def signIn():
     email = request.form['email']
     psw = request.form['psw']
@@ -91,10 +114,10 @@ def signIn():
             return render_template("home.html", user=user)
 
         else:
-            return render_template("login.html", user=None, msg="Credentials do not match, please try again ")
+            return render_template("login.html", user=None, msg="Credentials do not match, please try again")
 
 
-@app.route("/signup_action", methods=['POST'])
+@ app.route("/signup_action", methods=['POST'])
 def signUp():
     email = request.form['email']
     name = request.form['name']
