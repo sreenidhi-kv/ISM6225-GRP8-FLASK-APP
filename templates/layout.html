@@ -20,7 +20,7 @@
             <nav>
                 <ul>
                     {% if cartLen != None %}
-                    <li> <a class="name">Cart <b id="cartSize">{{cartLen}}</b></a></li>
+                    <li> <a href="{{ url_for('delivery') }}" class="name">Cart <b id="cartSize">{{cartLen}}</b></a></li>
                     {% endif %}
                     {% if user != None %}
                     <li><a href="{{ url_for('logout') }}">LogOut</a></li>

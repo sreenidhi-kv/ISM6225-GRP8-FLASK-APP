@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% block title %}
+Delivery
+{% endblock %}
+{% block additionalMeta %}
+{% endblock %}
+{% block additionalScript %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+{% endblock %}
+{% block mainBody %}
+<div class="signup-body">
+    {% if productList == None %}
+    <div>
+        <h2 class="center">No items added to the card, add items to cart from products page</h2>
+    </div>
+    {% else %}
+    <div>
+        <h2 class="center">Order Details</h2>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prod in productList %}
+                    <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{prod['name']}}</td>
+                        <td>{{prod['price']}}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr class="table-primary">
+                        <th scope="row" colspan="2">Total</th>
+                        <td>{{total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2 class="center">Delivery Details</h2>
+            <form action="/delivery_action" method="post">
+
+                <div class="row">
+                    <div class="col">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="inputName" name="name" required="true"
+                            value="{{user.name}}">
+                    </div>
+                    <div class="col">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" name="email"
+                            value="{{user.email}}" required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1"
+                        required="true" value="{{user.address1}}">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                        name="address2" value="{{user.inputAddress2}}">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" name="city" required="true"
+                            value="{{user.city}}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control" id="inputState" name="state" required="true"
+                            value="{{user.state}}">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip" name="zip" required="true"
+                            value="{{user.zip}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- Date input -->
+                    <label class="control-label" for="date">When would you like your meal delivered?</label>
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Anything else you would like us to know?</label>
+                    <textarea class="form-control" id="additionalInfo" rows="3"></textarea>
+                </div>
+                <br>
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var date_input = $('input[name="date"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            var options = {
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            };
+            date_input.datepicker(options);
+        })
+    </script>
+    {% endif %}
+</div>
+
+{% endblock %}
