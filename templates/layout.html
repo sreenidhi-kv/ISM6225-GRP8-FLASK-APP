@@ -18,10 +18,17 @@
         <header>
             <nav>
                 <ul>
+                    {% if user != None %}
+                    <li><a href="{{ url_for('logout') }}">LogOut</a></li>
+                    {% else %}
                     <li><a href="{{ url_for('login') }}">Login</a></li>
+                    {% endif %}
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('product') }}">Products</a></li>
                     <li><a href="{{ url_for('home') }}">Home</a></li>
+                    {% if user != None %}
+                    <li> <a class="name">Hi {{user['name']}} !!</a></li>
+                    {% endif %}
                 </ul>
             </nav>
             <img class="logo" src="{{ url_for('static', filename='kale-logo.png')}}" alt="Kale Logo" id="logo" />

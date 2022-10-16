@@ -47,6 +47,9 @@ h6 {
     font-size: .75rem;
 }
 
+.name{
+    color: #000;
+}
 
 span.is-active {
     transform:translateY(-15px);
@@ -168,9 +171,6 @@ nav ul {
     right: 0px;
  }
 
- .child-section-2__image{
-
- }
  .child-section{
     top: 50px;
     bottom: 50px;
@@ -197,9 +197,11 @@ nav ul {
 }
 
 .signup-body {
-    top: 100px;
-    padding: 45px;
+    padding-top: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
+    z-index: 15;
 }
 
 .div-body {
