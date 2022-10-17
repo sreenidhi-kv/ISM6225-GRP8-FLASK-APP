@@ -15,7 +15,12 @@ Delivery
 <div class="signup-body">
     {% if productList == None %}
     <div>
-        <h2 class="center">No items added to the card, add items to cart from products page</h2>
+        {% if msg == None %}
+        <h2 class="center" style="color: red;">No items present in the cart,<br> you can add items to cart from the
+            product page</h2>
+        {% else %}
+        <h2 class="center" style="color: navy;">{{msg}}</h2>
+        {% endif %}
     </div>
     {% else %}
     <div>
@@ -52,7 +57,7 @@ Delivery
                     <div class="col">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="inputName" name="name" required="true"
-                            value="{{user.name}}">
+                            value="{{user.firstName}} {{user.lastName}}">
                     </div>
                     <div class="col">
                         <label for="inputEmail">Email</label>
@@ -90,7 +95,8 @@ Delivery
                 <div class="form-group">
                     <!-- Date input -->
                     <label class="control-label" for="date">When would you like your meal delivered?</label>
-                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"
+                        required="true" />
                 </div>
 
                 <div class="form-group">

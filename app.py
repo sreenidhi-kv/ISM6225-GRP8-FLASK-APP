@@ -5,8 +5,9 @@ import bcrypt
 
 
 class User():
-    def __init__(self, name, email, psw, address1, address2, city, state, zip):
-        self.name = name
+    def __init__(self, firstName, lastName, email, psw, address1, address2, city, state, zip):
+        self.firstName = firstName
+        self.lastName = lastName
         self.email = email
         self.psw = psw
         self.address1 = address1
@@ -74,6 +75,7 @@ def getUser(email):
     return existing_json.get(email)
 
 
+@app.route("/delivery_action")
 @app.route("/")
 def home():
     return render_template("home.html", user=session.get('user'))
@@ -94,7 +96,7 @@ def about():
 
 @ app.route("/delivery/")
 def delivery():
-    return render_template("delivery.html", user=session.get('user'), productList=session.get('cart'), total=getTotal(session.get('cart')))
+    return render_template("delivery.html", user=session.get('user'), productList=session.get('cart'), msg=None, total=getTotal(session.get('cart')))
 
 
 @ app.route("/login/")
@@ -109,6 +111,13 @@ def logout():
     if 'cart' in session:
         session.pop('cart', None)
     return render_template("home.html", user=None, msg="User Successfully Logged out !!")
+
+
+@ app.route("/delivery_action", methods=['POST'])
+def deliveryAction():
+    if 'cart' in session:
+        session.pop('cart', None)
+    return render_template("delivery.html", user=session.get('user'), productList=None, msg="Thank you for ordering, Your all set for delivery on "+request.form['date']+" !!")
 
 
 @ app.route("/signin_action", methods=['POST'])
@@ -135,14 +144,15 @@ def signUp():
         return render_template("login.html", user=None, msg="Password do not match !!")
 
     email = request.form['email']
-    name = request.form['name']
+    firstName = request.form['firstName']
+    lastName = request.form['lastName']
     address1 = request.form['address1']
     address2 = request.form['address2']
     city = request.form['city']
     state = request.form['state']
     zip = request.form['zip']
 
-    user = User(name, email, bcrypt.hashpw(
+    user = User(firstName, lastName, email, bcrypt.hashpw(
         psw.encode('utf-8'), bcrypt.gensalt()).decode(), address1, address2, city, state, zip)
     if addUser(user=user):
         user_json = json.loads(json.dumps(user.__dict__))
@@ -172,11 +182,12 @@ def getCartSize():
     else:
         return '0'
 
-@ app.route('/sendMessage', methods= ['POST'])
+
+@ app.route('/sendMessage', methods=['POST'])
 def sendMessage():
     name = request.form['name']
     if (name == ""):
-        return render_template("about.html",user=session.get('user'), msg="Please enter your name.")
+        return render_template("about.html", user=session.get('user'), msg="Please enter your name.")
     email = request.form['email']
     if (email == ""):
         return render_template("about.html", user=session.get('user'), msg="Please enter your e-mail.")

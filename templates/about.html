@@ -8,7 +8,7 @@ About
 {% endblock %}
 {% block additionalScript %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
-<script src="{{ url_for('static', filename='aboutform.js')}}" ></script>
+<script src="{{ url_for('static', filename='aboutform.js')}}"></script>
 
 {% endblock %}
 {% block mainBody %}
@@ -31,29 +31,30 @@ About
 
             <tr>
                 <td style="width: 20%;">
-                    <img class="about_img" src="{{ url_for('static', filename='Widya.png')}}" alt="Widya Photo" id="Widya" >
+                    <img class="about_img" src="{{ url_for('static', filename='Widya.png')}}" alt="Widya Photo"
+                        id="Widya">
                 </td>
                 <td style="width: 20%;">
                     <b>Widya Musgrove - President</b>
                 </td>
-                <td style="width: 45%;  text-align: left;" >
+                <td style="width: 45%;  text-align: left;">
                     <i>
                         Widya Musgrove is the President of Kale&#769 Inc. Her passion for helping people live
-                                healthier life drives this company every day. She is a talented leader that brings a
-                                positive attitude to every situation. She oversaw the design of our website.
-                                She created a wire frame and Logo for the team. As part of assignment 2 she added Kale's
-                                Mascot on the opening section on the Homepage and wrote JavaScript code to make the
-                                tittle transition out on scroll and used JQuery to create moving-letter effects on mouse
-                                over.She used CSS pseudo elements to hide the navigation menu on load,incorporated
-                                custom font using CSS @font-face rule. Further she created the delivery/order form and
-                                also she wrote the product description.<br>
+                        healthier life drives this company every day. She is a talented leader that brings a
+                        positive attitude to every situation. She oversaw the design of our website.
+                        She created a wire frame and Logo for the team. As part of assignment 2 she added Kale's
+                        Mascot on the opening section on the Homepage and wrote JavaScript code to make the
+                        tittle transition out on scroll and used JQuery to create moving-letter effects on mouse
+                        over.She used CSS pseudo elements to hide the navigation menu on load,incorporated
+                        custom font using CSS @font-face rule. Further she created the delivery/order form and
+                        also she wrote the product description.<br>
                     </i>
                 </td>
             </tr>
             <br>
             <tr>
                 <td style="width: 20%;">
-                    <img class="about_img" src="{{ url_for('static', filename='Sree.png')}}" alt="Sree Image" id="Sree" >
+                    <img class="about_img" src="{{ url_for('static', filename='Sree.png')}}" alt="Sree Image" id="Sree">
                 </td>
                 <td style="width: 20%;">
                     <b>Sreenidhi K V Naik - CEO</b>
@@ -74,7 +75,8 @@ About
             <br>
             <tr>
                 <td style="width: 20%;">
-                    <img class="about_img" src="{{ url_for('static', filename='Burak.png')}}" alt="Burak Image" id="Burak">
+                    <img class="about_img" src="{{ url_for('static', filename='Burak.png')}}" alt="Burak Image"
+                        id="Burak">
                 </td>
                 <td style="width: 20%;">
                     <b>Guven Burak Dekkan - CTO</b>
@@ -86,13 +88,14 @@ About
                         He created the landing page for our team and added the login page as an improvement to
                         Assignment-1. The login page is not currently functional, but has all the input
                         validation required to create new user.
-                    </i>        
+                    </i>
                 </td>
             </tr>
             <br>
             <tr>
                 <td style="width: 20%;">
-                    <img class="about_img" src="{{ url_for('static', filename='Tyler.png')}}" alt="Tyler Image" id="Tyler" >
+                    <img class="about_img" src="{{ url_for('static', filename='Tyler.png')}}" alt="Tyler Image"
+                        id="Tyler">
                 </td>
                 <td style="width: 20%;">
                     <b> Tyler Sobieray - CFO</b>
@@ -118,19 +121,22 @@ About
         {% if msg != None %}
         <h4 style="color: navy;"> {{ msg }} </h4>
         {% endif %}
-        <div id = "popup">
-        <form action="/sendMessage" id="form" method="post" name="form" style="align-content: center;">
-        <input class = "form-control" id="name"  name="name" placeholder="Name" type="text" required="true" value="{{user.name}}">
-        <input class = "form-control" id="email" name="email" placeholder="Email" type="text" required="true" value="{{user.email}}">
-        <br>
-        <textarea class = "form-control" id="msg" name="message" placeholder="Type your Message" required="true"></textarea>
-        <br><br>
-        <button id="Contact Us" type="submit">Send Message</button>
-        </form>
+        <div id="popup">
+            <form action="/sendMessage" id="form" method="post" name="form" style="align-content: center;">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required="true"
+                    value="{{user.firstName}} {{user.lastName}}">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="text" required="true"
+                    value="{{user.email}}">
+                <br>
+                <textarea class="form-control" id="msg" name="message" placeholder="Type your Message"
+                    required="true"></textarea>
+                <br><br>
+                <button id="Contact Us" type="submit">Send Message</button>
+            </form>
         </div>
 
 
     </section>
-  
+
 </div>
 {% endblock %}

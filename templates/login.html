@@ -35,9 +35,15 @@ Login
   <div>
     <h2 class="center">Sign Up</h2>
     <form action="/signup_action" method="post">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="inputName" name="name" required="true">
+      <div class="row">
+        <div class="col">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required="true">
+        </div>
+        <div class="col">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required="true">
+        </div>
       </div>
       <div class="row">
         <div class="col">

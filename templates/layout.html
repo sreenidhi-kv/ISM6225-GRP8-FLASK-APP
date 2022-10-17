@@ -31,7 +31,7 @@
                     <li><a href="{{ url_for('product') }}">Products</a></li>
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     {% if user != None %}
-                    <li> <a class="name">Hi {{user['name']}} !!</a></li>
+                    <li> <a class="name">Hi {{user['firstName']}} !!</a></li>
                     {% endif %}
                 </ul>
             </nav>
