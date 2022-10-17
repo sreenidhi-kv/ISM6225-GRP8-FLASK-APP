@@ -113,14 +113,19 @@ About
         </table>
         <br>
 
+        <h2>Do you have any Questions?</h2>
+        <p>Please provide your name, e-mail, and message, then we will get back to you!</p>
+        {% if msg != None %}
+        <h4 style="color: navy;"> {{ msg }} </h4>
+        {% endif %}
         <div id = "popup">
-        <form action="#" id="form" method="post" name="form" style="align-content: center;">
-        <input id="name"  name="name" placeholder="Name" type="text">
-        <input id="email" name="email" placeholder="Email" type="text">
+        <form action="/sendMessage" id="form" method="post" name="form" style="align-content: center;">
+        <input class = "form-control" id="name"  name="name" placeholder="Name" type="text" required="true" value="{{user.name}}">
+        <input class = "form-control" id="email" name="email" placeholder="Email" type="text" required="true" value="{{user.email}}">
         <br>
-        <textarea id="msg" name="message" placeholder="Type your Message"></textarea>
+        <textarea class = "form-control" id="msg" name="message" placeholder="Type your Message" required="true"></textarea>
         <br><br>
-        <button id="Contact Us" onclick="empty_form()">Send Message</button>
+        <button id="Contact Us" type="submit">Send Message</button>
         </form>
         </div>
 

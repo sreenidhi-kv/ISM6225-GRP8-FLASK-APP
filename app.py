@@ -171,3 +171,17 @@ def getCartSize():
         return str(len(session['cart']))
     else:
         return '0'
+
+@ app.route('/sendMessage', methods= ['POST'])
+def sendMessage():
+    name = request.form['name']
+    if (name == ""):
+        return render_template("about.html",user=session.get('user'), msg="Please enter your name.")
+    email = request.form['email']
+    if (email == ""):
+        return render_template("about.html", user=session.get('user'), msg="Please enter your e-mail.")
+    message = request.form['message']
+    if (message == ""):
+        return render_template("about.html", user=session.get('user'), msg="Please type us a message.")
+    else:
+        return render_template("about.html", user=session.get('user'), msg="We have received your message!")
