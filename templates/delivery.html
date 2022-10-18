@@ -23,7 +23,8 @@ Delivery
         {% endif %}
     </div>
     {% else %}
-    <div>
+    <div class="col-12 col-sm-8 col-md-6 mx-auto">
+
         <h2 class="center">Order Details</h2>
         <div>
             <table class="table">
@@ -49,10 +50,10 @@ Delivery
                 </tbody>
             </table>
         </div>
+        <hr>
         <div>
             <h2 class="center">Delivery Details</h2>
             <form action="/delivery_action" method="post">
-
                 <div class="row">
                     <div class="col">
                         <label for="name">Name</label>
@@ -104,8 +105,44 @@ Delivery
                     <textarea class="form-control" id="additionalInfo" rows="3"></textarea>
                 </div>
                 <br>
+                <hr>
+                <h2 class="center">Payment Details</h2>
+                <div class="row">
+                    <div id="pay-invoice" class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="cc-number" class="control-label mb-1">Card number</label>
+                                <input id="cc-number" name="cc-number" type="tel"
+                                    class="form-control cc-number identified visa" required autocomplete="off">
+                                <span class="invalid-feedback">Enter a valid 12 to 16 digit card number</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                                        <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required
+                                            placeholder="MM / YY" autocomplete="cc-exp">
+                                        <span class="invalid-feedback">Enter the expiration date</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="x_card_code" class="control-label mb-1">CVV</label>
+                                    <div class="input-group">
+                                        <input id="x_card_code" name="x_card_code" type="tel"
+                                            class="form-control cc-cvc" required autocomplete="off">
+                                        <span class="invalid-feedback order-last">Enter the 3-digit code on
+                                            back</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
                 <div class="clearfix">
-                    <button type="submit" class="signupbtn btn btn-primary">Submit</button>
+                    <button type="submit" class="signupbtn btn btn-primary float-end">Submit</button>
                 </div>
             </form>
         </div>
