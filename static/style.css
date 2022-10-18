@@ -198,7 +198,7 @@ nav ul {
 }
 
 .signup-body {
-    padding-top: 200px;
+    padding-top: 120px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: left;
@@ -370,8 +370,4 @@ footer {
 textarea {
   width: 50%;
   height: 90px;
-}
-
-.button{
-    border: 2px black;
 }

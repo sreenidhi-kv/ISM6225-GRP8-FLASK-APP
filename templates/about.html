@@ -121,10 +121,14 @@ About
         {% if msg != None %}
         <h4 style="color: navy;"> {{ msg }} </h4>
         {% endif %}
-        <div id="popup">
+        <div id="popup" class="col-12 col-sm-8 col-md-6 mx-auto">
             <form action="/sendMessage" id="form" method="post" name="form" style="align-content: center;">
+                {% if user == None %}
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required="true">
+                {% else %}
                 <input class="form-control" id="name" name="name" placeholder="Name" type="text" required="true"
                     value="{{user.firstName}} {{user.lastName}}">
+                {% endif %}
                 <input class="form-control" id="email" name="email" placeholder="Email" type="text" required="true"
                     value="{{user.email}}">
                 <br>
